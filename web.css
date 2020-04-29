@@ -1,0 +1,151 @@
+/* on top of canvas*/
+:root {
+    --home-color: #423e6e;
+    --ar-color: #ffbf00;
+    --vr-color: #2bdfbb;
+    --experiences-color: #e24161;
+    --contact-color: #b441e2;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  h3{
+      color: #000000
+  }
+  
+  body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .title {
+    background-color: #ffffff;
+    display: block;
+    margin: 0;
+    padding: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  
+  .view {
+    color: #ffffff;
+    height: 100vh;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .view__title {
+    font-size: 30px;
+    padding: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    position: absolute;
+  }
+  
+  .home ,
+  .legend__item--home .legend__bg {
+    background-color: var(--home-color);
+  }
+  
+  .ar,
+  .legend__item--ar .legend__bg {
+    background-color: var(--ar-color);
+  }
+  
+  .vr,
+  .legend__item--vr .legend__bg {
+    background-color: var(--vr-color);
+  }
+  
+  .experiences,
+  .legend__item--experiences .legend__bg {
+    background-color: var(--experiences-color);
+  }
+
+  .contact,
+  .legend__item--contact .legend__bg {
+    background-color: var(--contact-color);
+  }
+  
+  .percentage {
+    height: 200px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+  }
+  
+  .percentage__value {
+    font-size: 160px;
+  }
+  
+  .percentage__extension {
+    font-size: 50px;
+  }
+  
+  .sub {
+    display: block;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  
+  .legend {
+    background-color: #ffffff;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .legend__bg {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .legend__item {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.21);
+  }
+  
+  .legend__title {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .legend__item--home {
+    z-index: 10;
+  }
+  
+  .legend__item--ar {
+    z-index: 9;
+  }
+  
+  .legend__item--vr {
+    z-index: 8;
+  }
+  
+  .legend__item--experiences {
+    z-index: 7;
+  }
+
+  .legend__item--contact {
+    z-index: 6;
+  }
