@@ -3,42 +3,48 @@
 
 <head>
     <title>Multicanvas scenes</title>
-    <link rel = "stylesheet" type="text/css" href="web.css">
-    <link rel = "stylesheet" type="text/css" href="babylon.css">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+    <link rel="stylesheet" type="text/css" href="css/babylon.css">
     <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
     <script src="https://preview.babylonjs.com/babylon.js"></script>
-    
-    <script src="index.js"></script>
+
+    <!--Babylon stuff-->
+    <script src="js/MaterialManager.js"></script>
+    <script src="js/index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
 
 <body>
 
+    <script src="js/helperFunctions.js"></script>
+    <script src="js/observer.js"></script>
+    <script src="js/3DClasses.js"></script>
+
     <div id="root">
         <div class="container">
             <section class="legend">
                 <div class="legend__item legend__item--home">
-                  <h3 class="legend__title">Home<h3>
-                    <div class="legend__bg"></div>
+                    <h3 class="legend__title">Home<h3>
+                            <div class="legend__bg"></div>
                 </div>
                 <div class="legend__item legend__item--ar">
-                  <h3 class="legend__title">AR</h3>
-                  <div class="legend__bg"></div>
+                    <h3 class="legend__title">AR</h3>
+                    <div class="legend__bg"></div>
                 </div>
                 <div class="legend__item legend__item--vr">
-                  <h3 class="legend__title">VR</h3>
-                  <div class="legend__bg"></div>
+                    <h3 class="legend__title">VR</h3>
+                    <div class="legend__bg"></div>
                 </div>
                 <div class="legend__item legend__item--experiences">
-                  <h3 class="legend__title">Experiences</h3>
-                  <div class="legend__bg"></div>
+                    <h3 class="legend__title">Experiences</h3>
+                    <div class="legend__bg"></div>
                 </div>
                 <div class="legend__item legend__item--contact">
                     <h3 class="legend__title">Contact</h3>
                     <div class="legend__bg"></div>
-                  </div>
-              </section>
+                </div>
+            </section>
             <!--div id='mark'>200px above viewport</div-->
             <!--canvas class="renderCanvas" id="renderCanvas0" touch-action="none"></canvas-->
             <section id="subcontainer_rc1" class="observed home">
@@ -105,8 +111,8 @@
             }
         });
     </script>
-        <script src="helperFunctions.js"></script>
-        <script src="observer.js"></script>
+
+
 
 </body>
 
