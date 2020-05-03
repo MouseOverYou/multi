@@ -1,5 +1,5 @@
 class Stage {
-    constructor(name, posY, colorValue, discMat, iphoneMat, desktopMat){
+    constructor(name, posY, colorValue, discMat, iphoneMat, desktopMat, state){
     //parent
     this.stage_P = new BABYLON.TransformNode("stage_P " + name, scene);
     //pos_P
@@ -23,9 +23,9 @@ class Stage {
 
     this.Back.material = this.mat
     this.Floor.material = this.mat
-    this.discMesh = new BABYLON.MeshBuilder.CreateSphere("discMesh " + name, { diameter: 2, tessellation: 48, sideOrientation: BABYLON.Mesh.DOUBLESIDE }, scene)
+    this.discMesh = new BABYLON.MeshBuilder.CreateSphere("discMesh " + name, { diameter: 0.5, tessellation: 48, sideOrientation: BABYLON.Mesh.DOUBLESIDE }, scene)
     this.discMesh.material = discMat;
-    this.discMesh.position = new BABYLON.Vector3(-0, -0.25, 1.5);
+    this.discMesh.position = new BABYLON.Vector3(-5, -1, 1.5);
     this.IPhoneRef.material = iphoneMat;
     this.DesktopRef.material = desktopMat;
 
@@ -41,5 +41,20 @@ class Stage {
     this.DesktopRef.parent = this.stage_P;
     //this.light.parent = this.stage_P;
 
+    if(state==false){
+
+        this.IPhoneRef.isVisible = false
+        this.DesktopRef.isVisible = false
+        this.discMesh.isVisible = false
+    }
+
     }
 }
+
+class PointerLight {
+    constructor(){
+        this.light = new BABYLON.PointLight("pointLight1", new BABYLON.Vector3(1, 10, 1), scene)
+
+    }
+}
+

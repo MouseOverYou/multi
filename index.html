@@ -5,21 +5,23 @@
     <title>WebShowcase</title>
     <link rel="stylesheet" type="text/css" href="css/web.css">
     <link rel="stylesheet" type="text/css" href="css/babylon.css">
-    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
-    <script src="https://preview.babylonjs.com/babylon.js"></script>
-
-    <!--Babylon stuff-->
-    <script src="js/MaterialManager.js"></script>
-    <script src="js/index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!--Babylon stuff-->
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+
+    <!-- gsap animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
 
 </head>
 
 <body>
 
-    <script src="js/helperFunctions.js"></script>
-    <script src="js/observer.js"></script>
-    <script src="js/3DClasses.js"></script>
 
     <div id="root">
         <div class="container">
@@ -94,22 +96,19 @@
             </section>
         </div>
     </div>
+    <!--3D stuff-->
+    <script src="js/MaterialManager.js"></script>
+    <script src="js/AnimationManager.js"></script>
+    <script src="js/MeshLoader.js"></script>
+    <script src="js/HandleWorlds.js"></script>
+
+    <script src="js/helperFunctions.js"></script>
+    <script src="js/observer.js"></script>
+    <script src="js/3DClasses.js"></script>
+    <script src="js/index.js"></script>
 
     <script>
-        // Create a working document
-        var canvas = document.createElement("canvas");
 
-        var engine = new BABYLON.Engine(canvas, true);
-
-        // Set the default canvas to use for events
-        engine.inputElement = document.getElementById("renderCanvas1");
-        var scene = createScene();
-        //scene.debuglayer.show();
-        engine.runRenderLoop(function () {
-            if (scene.activeCamera) {
-                scene.render();
-            }
-        });
     </script>
 
 
@@ -117,6 +116,6 @@
 </body>
 
 </html>
-
-To do:
+<!--To do:
 scene with stage area always seen, Babylon cameras responsive
+-->

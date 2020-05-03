@@ -29,9 +29,15 @@ const handleChanges = (entries) => {
         const percentage = Math.ceil(intersectionRatio * 100);
 
         element.firstChild.data = percentage;
-        var animRate = RangeMapper(percentage, -2, 2)
-        //console.log(view)
+        
+        
+        //console.log(target.id)
+        if(target.id == "subcontainer_rc2"){
+            var animRate = RangeMapper2(percentage,0, 90, 0, 1)
+            machineAnim.progress(animRate);
+        }
         //disc3.position.x = animRate;
+
         
         scaleLegendBg({
             bg: document.querySelector(`.legend__item--${view}`).querySelector('.legend__bg'),
