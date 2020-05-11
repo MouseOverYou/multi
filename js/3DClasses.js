@@ -5,8 +5,8 @@ class Stage {
     //pos_P
     this.stage_P.position =  new BABYLON.Vector3(0, posY,0);
     //meshes
-    this.Back = new BABYLON.MeshBuilder.CreateBox("Back " + name, { width: 15, height: 6, depth: 0.1 }, scene);
-    this.Back.position = new BABYLON.Vector3(0, 1.5, 3);
+    this.Back = new BABYLON.MeshBuilder.CreateBox("Back " + name, { width: 15, height: 7, depth: 0.1 }, scene);
+    this.Back.position = new BABYLON.Vector3(0, 0, 3);
 
     this.Floor = new BABYLON.MeshBuilder.CreateBox("Floor " + name, { width: 15, height: 0.1, depth: 6 }, scene);
     this.Floor.position = new BABYLON.Vector3(0, -1.5, 1.5);
@@ -46,6 +46,7 @@ class Stage {
         this.IPhoneRef.isVisible = false
         this.DesktopRef.isVisible = false
         this.discMesh.isVisible = false
+        this.Floor.isVisible = false
     }
 
     }

@@ -1,0 +1,54 @@
+.contentHolder {
+    top: 50%;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    width: 100%;
+    opacity: 1;
+    pointer-events:none;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    font-size: 70px;
+    line-height: 70px;
+    right:50%;
+  }
+  
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    margin: 0;
+    margin-top: 10px;
+    line-height: 30px;
+  }  
+
+a.button1 {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:1vh 0.3em 0 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    pointer-events: auto;
+}
+
+a.button1:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+
+@media all and (max-width:30em){
+     a.button1{
+    display:block;
+    margin:0.4em auto;
+    }
+}

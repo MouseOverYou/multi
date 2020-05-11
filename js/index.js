@@ -20,7 +20,7 @@ var createScene = function () {
     camera.upperRadiusLimit = 20;
 
     var camera1 = new BABYLON.FreeCamera("FlyCamera", new BABYLON.Vector3(0, 100, -4.3), scene);
-    var camera2 = new BABYLON.FreeCamera("FlyCamera", new BABYLON.Vector3(0, 50, -4.3), scene);
+    var camera2 = new BABYLON.FreeCamera("FlyCamera", new BABYLON.Vector3(-1, 50, -4.3), scene);
     var camera3 = new BABYLON.FreeCamera("FlyCamera", new BABYLON.Vector3(0, 0, -4.3), scene);
     var camera4 = new BABYLON.FreeCamera("FlyCamera", new BABYLON.Vector3(0, -50, -4.3), scene);
     var camera5 = new BABYLON.FreeCamera("FlyCamera", new BABYLON.Vector3(0, -100, -4.3), scene);
